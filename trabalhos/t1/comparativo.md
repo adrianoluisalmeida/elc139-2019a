@@ -11,8 +11,8 @@ Nome: Adriano Luís de Almeida
 | Imagem (foto, diagrama, screenshot, etc.)                 | <img src="https://www.olcf.ornl.gov/wp-content/uploads/2013/01/titan_front.jpg" width="48"> | <img src="https://i.dell.com/sites/csimages/Videos_Images/en/69227bce-ff5c-4525-9fe2-64a4ae7cec5d.jpg" width="48">|
 | Classificação de Flynn                                    | MIMD                  | MIMD            |
 | Memória: compartilhada, distribuída ou ambas?             | Distribuida           | Compartilhada   |
-| Número total de núcleos de processamento                  | 16C                   | 4               |
-| Fabricante e modelo do(s) processador(es)                 | AMD Opteron 6274      | Intel Core i5   |
+| Número total de núcleos de processamento                  | 16C                   | 2C / 4 Threads  |
+| Fabricante e modelo do(s) processador(es)                 | AMD Opteron 6274      | Intel Core i5 7200U   |
 | Frequência do(s) processador(es)                          | 2.2GHz                | 2.5 GHz-3.1 GHz |
 | Memória total                                             | 710 terabytes         | 8GB             |
 | Tipo(s) de interconexão entre os núcleos/processadores    | Gêmeos                | QuickPath       |
