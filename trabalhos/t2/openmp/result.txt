@@ -1,0 +1,143 @@
+./openmp_dotprod 1 1000 10
+Tempo de execução: 176 usec
+
+ ./openmp_dotprod 1 1000 100
+Tempo de execução: 1813 usec
+
+./openmp_dotprod 1 1000 1000
+Tempo de execução: 6072 usec
+
+./openmp_dotprod 1 1000 2000
+Tempo de execução: 9928 usec
+
+ ./openmp_dotprod 1 10000 10 
+Tempo de execução: 1404 usec
+
+./openmp_dotprod 1 10000 100
+Tempo de execução: 16787 usec
+
+./openmp_dotprod 1 10000 1000
+Tempo de execução: 61228 usec
+
+./openmp_dotprod 1 10000 2000
+Tempo de execução: 69508 usec
+
+./openmp_dotprod 1 100000 1000
+Tempo de execução: 298550 usec
+
+./openmp_dotprod 1 100000 10
+Tempo de execução: 9865 usec
+
+./openmp_dotprod 1 100000 100
+Tempo de execução: 32943 usec
+
+./openmp_dotprod 1 100000 1000
+Tempo de execução: 323363 usec
+
+./openmp_dotprod 1 100000 2000
+Tempo de execução: 614065 usec
+
+2 THREADS
+
+./openmp_dotprod 2 1000 10
+Tempo de execução: 52 usec
+
+./openmp_dotprod 2 1000 100
+Tempo de execução: 477 usec
+
+./openmp_dotprod 2 1000 1000
+Tempo de execução: 7308 usec
+
+./openmp_dotprod 2 1000 2000
+Tempo de execução: 6005 usec
+
+./openmp_dotprod 2 10000 10
+Tempo de execução: 1308 usec
+
+./openmp_dotprod 2 10000 100
+Tempo de execução: 6482 usec
+
+./openmp_dotprod 2 10000 1000
+Tempo de execução: 20083 usec
+
+./openmp_dotprod 2 10000 2000
+Tempo de execução: 56159 usec
+
+./openmp_dotprod 2 100000 10
+Tempo de execução: 2336 usec
+
+./openmp_dotprod 2 100000 100
+Tempo de execução: 16885 usec
+
+./openmp_dotprod 2 100000 1000
+Tempo de execução: 179125 usec
+
+./openmp_dotprod 2 100000 2000
+Tempo de execução: 299036 usec
+
+4 THREADS
+
+./openmp_dotprod 4 1000 10
+Tempo de execução: 4093 usec
+
+./openmp_dotprod 4 1000 100
+Tempo de execução: 8091 usec
+
+./openmp_dotprod 4 1000 1000
+Tempo de execução: 13921 usec
+
+./openmp_dotprod 4 1000 2000
+Tempo de execução: 17914 usec
+
+./openmp_dotprod 4 10000 10
+Tempo de execução: 3092 usec
+
+./openmp_dotprod 4 1000 100
+Tempo de execução: 777 usec
+
+./openmp_dotprod 4 1000 1000
+Tempo de execução: 6815 usec
+
+./openmp_dotprod 4 1000 2000
+Tempo de execução: 18091 usec
+
+./openmp_dotprod 4 10000 10
+Tempo de execução: 1768 usec
+
+./openmp_dotprod 4 10000 100
+Tempo de execução: 3667 usec
+
+./openmp_dotprod 4 10000 1000
+Tempo de execução: 21883 usec
+
+
+./openmp_dotprod 4 10000 2000
+Tempo de execução: 31576 usec
+
+
+./openmp_dotprod 4 100000 10
+Tempo de execução: 4007 usec
+
+./openmp_dotprod 4 100000 100
+Tempo de execução: 20028 usec
+
+./openmp_dotprod 4 100000 1000
+Tempo de execução: 124338 usec
+
+./openmp_dotprod 4 100000 2000
+Tempo de execução: 282788 usec
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

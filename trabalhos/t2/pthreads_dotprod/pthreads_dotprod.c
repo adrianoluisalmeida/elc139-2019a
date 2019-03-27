@@ -42,9 +42,9 @@ void *dotprod_worker(void *arg)
       }
    }
 
-   pthread_mutex_lock (&mutexsum);
+   pthread_mutex_lock (&mutexsum); //LINHA EXTRA 1
    dotdata.c += mysum;
-   pthread_mutex_unlock (&mutexsum);
+   pthread_mutex_unlock (&mutexsum); //LINHA EXTRA 2
 
    pthread_exit((void*) 0);
 }

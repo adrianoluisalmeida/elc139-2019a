@@ -1,0 +1,14 @@
+4 threads
+
+/pthreads_dotprod 4 100000 10
+4 thread(s), 13478 usec
+
+./pthreads_dotprod 4 100000 100
+4 thread(s), 66287 usec
+
+./pthreads_dotprod 4 100000 1000
+4 thread(s), 512976 usec
+
+./pthreads_dotprod 4 100000 2000
+4 thread(s), 1026511 usec
+
