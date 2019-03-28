@@ -1,0 +1,4 @@
+Dell 7460
+Intel Core i5 7200U
+2C / 4 Threads
+4GB de Memória RAM
