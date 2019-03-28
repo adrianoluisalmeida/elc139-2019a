@@ -87,6 +87,14 @@ De forma clara podemos dizer que caiu pela metade, sendo no primeiro caso (1 Thr
 ### Questão 4
 - Elabore um gráfico/tabela de aceleração a partir dos dados obtidos no exercício anterior.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/adrianoluisalmeida/elc139-2019a/master/trabalhos/t2/pthreads_dotprod/graficos/Pthread%20-%201%20Thread.png" alt=""/>
+  
+  <img src="https://raw.githubusercontent.com/adrianoluisalmeida/elc139-2019a/master/trabalhos/t2/pthreads_dotprod/graficos/Pthread%20-%202%20Thread.png" alt="">
+
+   <img src="https://raw.githubusercontent.com/adrianoluisalmeida/elc139-2019a/master/trabalhos/t2/pthreads_dotprod/graficos/Pthread%20-%204%20Thread.png" alt="">
+</p>
+
 
 
 ### Questão 5
@@ -131,3 +139,11 @@ As linhas removidas são o controle por semáforo da variável responsável pela
 | 1000              | 457           | 1156           | 9282             | 17914            | 
 | 10000             | 1768          | 3667           | 21883            | 31576            | 
 | 100000            | 4007          | 20028          | 124338           | 282788           | 
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/adrianoluisalmeida/elc139-2019a/master/trabalhos/t2/openmp/graficos/Openmp%20-%201%20Thread.png" alt=""/>
+  
+  <img src="https://raw.githubusercontent.com/adrianoluisalmeida/elc139-2019a/master/trabalhos/t2/openmp/graficos/Openmp%20-%202%20Thread.png" alt="">
+
+   <img src="https://raw.githubusercontent.com/adrianoluisalmeida/elc139-2019a/master/trabalhos/t2/openmp/graficos/Openmp%20-%204%20Thread.png" alt="">
+</p>
