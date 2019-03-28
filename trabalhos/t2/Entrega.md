@@ -116,7 +116,12 @@ As linhas removidas são o controle por semáforo da variável responsável pela
 
 ## Parte II: OpenMP
 
+### Questão 1
+- Implemente um programa equivalente a pthreads_dotprod.c usando OpenMP.
+O programa openmp_doprod foi programado utilizando o modelo do pthreads com a reformulação necessária para implementar a biblioteca do OpenMP. O resultado foi muito melhor em comparação ao uso do pthreads, como é apresentado abaixo:
+
 ### Questão 2
+- 
 
 |                   |               |                |                  |                  | 
 |-------------------|---------------|----------------|------------------|------------------| 

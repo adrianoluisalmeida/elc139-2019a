@@ -52,17 +52,6 @@ void fill(double *a, int size, double value){
    }
 }
 
-/*
- * Cria vetor 
- **/
-void cria_vetor(){
-    dotdata.a = (double *) malloc(dotdata.wsize*sizeof(double));
-    fill(dotdata.a, dotdata.wsize, 0.01);
-    dotdata.b = (double *) malloc(dotdata.wsize*sizeof(double));
-    fill(dotdata.b, dotdata.wsize, 1.0);
-    dotdata.c = 0.0;
-}
-
 /**
  * Realiza o calculo do produto escalar
  * */
@@ -96,7 +85,13 @@ int main(int argc, char **argv){
     omp_set_num_threads(atoi(argv[1]));
     dotdata.wsize = atoi(argv[2]);  // worksize = tamanho do vetor de cada thread
     dotdata.repeat = atoi(argv[3]); // numero de repeticoes dos calculos (para aumentar carga)
-    cria_vetor(); //cria vetor
+    
+    dotdata.a = (double *) malloc(dotdata.wsize*sizeof(double));
+    fill(dotdata.a, dotdata.wsize, 0.01);
+    dotdata.b = (double *) malloc(dotdata.wsize*sizeof(double));
+    fill(dotdata.b, dotdata.wsize, 1.0);
+    dotdata.c = 0.0;
+    
     timer_init();
     dotprod();
     timer_end();
