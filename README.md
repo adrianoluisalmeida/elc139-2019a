@@ -10,6 +10,7 @@ Sala: 363, CT
  1. [TOP500 & me: comparativo de arquiteturas paralelas](trabalhos/t1) (entrega até terça, 19/03, 9h)
  2. [Programação paralela multithread](trabalhos/t2) (entrega até quarta, 27/03, 23h59)
  3. [Scheduling com OpenMP](trabalhos/t3) (entrega até segunda, 08/04, 23h59)
+ 4. [Geração de Fractais de Mandelbrot em OpenMP](trabalhos/t4) (entrega até quarta, 17/04, 23h59)
 <!--
  2. [Experiências com profilers](trabalhos/t2) (entrega até quarta, 21/03, 23h59)
  3. [Programação paralela multithread](trabalhos/t3) (entrega até segunda, 09/04, 23h59)
