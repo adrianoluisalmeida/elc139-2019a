@@ -11,6 +11,7 @@ Aluno: Adriano Luís de Almeida
 - Implementação fractalpar1.cpp -> https://bit.ly/2Ui3CgZ
 - Implementação fractalpar2.cpp -> https://bit.ly/2P9fZuR
 - Apresentação de Slides -> https://bit.ly/2GnpiEP
+- Planilha de Resultados obtidos -> https://bit.ly/2GomhUE
 
 
 ## Referências 
