@@ -29,7 +29,7 @@ void check_result(double total_dotprod, int wsize, int qtd_proc);
 
 
 int main(int argc, char **argv) {
-    int myrank, p, source, dest = 0, tag = 0, wsize, repeat;         // "rank" do processo (0 a P-1)
+    int myrank, p, source, dest = 0, tag = 0, wsize, repeat;
     
     double result;      // a mensagem (resultado do calculo)
     MPI_Status status;  // "status" de uma operação efetuada
