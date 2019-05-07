@@ -25,6 +25,7 @@ int main(int argc,char *argv[])
         printf("p[%d] <- p[%d]\n", rank, rank-1);
         printf("[FIM] Processo %d obteve o resultado %d\n\n", rank, msg);
     } else {
+        msg++;
         printf("p[%d] -> p[%d]\n", rank, rank+1);
         MPI_Send(&msg, 1, MPI_INT, (rank+1), 0, MPI_COMM_WORLD); // envia mensagem para o rank + 1 = 1
     }

@@ -29,7 +29,79 @@ O código em questão está documentado em cada uma das funções do MPI. Pode s
 
 - 1.1 Avalie o desempenho do programa conforme as instruções do trabalho t2, mas variando o número de processos (-np) ao invés de threads.
 
-// a fazer..
+Para os testes foram realizados 30 execuções do código [mpi_dotprod.c](mpi/mpi_dotprod.c) com auxilio do [calc_time.sh] (mpi/calc_time.sh) que calcula a média das execuções de acordo com a entrada:
+```sh
+ ./calc_time.sh <np> <workizeTotal> <repeticoes>.
+```
+O calc_time além de armazenar a média das execuções, utiliza a mesma pra calcular o speedup, levando em consideração as seguintes regras:
+
+S(p) = T(s) / T(p)
+
+Onde p equivale a quantidade de processadores, t(s) equivale a execução com apenas 1 processo e t(p) execução paralela, nesse caso com os processos.
+
+Além disso o worksize foi recalculado, usando a seguinte regra:
+
+worksize(processo(i)) = worksizetotal ÷ np
+
+nesse caso uma execução com worksizeTotal igual a 100.000 e com 2 processo e 100 repetições equivale ao seguinte:
+
+```sh
+./calc_time.sh 2 50.000 100.
+```
+
+## Resultados 
+
+## Res.(1) - *Unidade de Tempo = usec*
+
+### 2 processos
+
+| worksizetotal                                | 100 repetições | 1.000 repetições | 2.000 repetições |
+|----------------------------------------------|----------------|------------------|------------------|
+| 10.000                                       | 1603.33        | 20808.17         | 40452.99         |
+| 100.000                                      | 22177.68       | 171171.90        | 327442.30        |
+| 1.000.000                                    | 172733.65      | 1663422.64       | 3402707.69       |
+
+### 4 processos
+
+| worksizetotal                                | 100 repetições | 1.000 repetições | 2.000 repetições |
+|----------------------------------------------|----------------|------------------|------------------|
+| 10.000                                       | 1378.35        | 15418.62         | 28581.61         |
+| 100.000                                      | 16441.98       | 126059.85        | 270086.68        |
+| 1.000.000                                    | 132655.47      | 1198956.365      | 2639908.53       |
+
+### 8 processos
+
+| worksizetotal                                | 100 repetições | 1.000 repetições | 2.000 repetições |
+|----------------------------------------------|----------------|------------------|------------------|
+| 10.000                                       | 2447.49        | 14250.80         | 28779.44         |
+| 100.000                                      | 16850.28       | 129914.42        | 235336.78        |
+| 1.000.000                                    | 130110.99      | 1167707.65       | 2545583.90       |
+
+## Res.(2) - *Speedup*
+
+### 2 processos
+
+| worksizetotal                                | 100 repetições | 1.000 repetições | 2.000 repetições |
+|----------------------------------------------|----------------|------------------|------------------|
+| 10.000                                       | 1.873          | 1.410            | 1.448            |
+| 100.000                                      | 1.368          | 1.778            | 2.303            |
+| 1.000.000                                    | 1.809          | 2.054            | 2.034            |
+
+### 4 processos
+
+| worksizetotal                                | 100 repetições | 1.000 repetições | 2.000 repetições |
+|----------------------------------------------|----------------|------------------|------------------|
+| 10.000                                       | 1.873          | 1.410            | 1.448            |
+| 100.000                                      | 1.368          | 1.778            | 2.303            |
+| 1.000.000                                    | 1.809          | 2.054            | 2.034            |
+
+### 8 processos
+
+| worksizetotal                                | 100 repetições | 1.000 repetições | 2.000 repetições |
+|----------------------------------------------|----------------|------------------|------------------|
+| 10.000                                       | 1.252          | 2.068            | 2.715            |
+| 100.000                                      | 1.829          | 2.331            | 2.563            |
+| 1.000.000                                    | 2.448          | 2.794            | 2.534            |
 
 # Parte 2
 - Implemente um programa MPI que transporte uma mensagem em um pipeline formado por processos de 0 a NP-1 (processo 0 envia para 1, processo 1 envia para 2, ..., processo NP-1 mostra o resultado). A mensagem é um número inteiro que é incrementado antes de ser passado adiante.

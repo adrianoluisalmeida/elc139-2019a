@@ -124,9 +124,11 @@ long wtime() {
 
 // Mostra resultado da execução
 void show_info(double total_dotprod, int wsize, int p, long start_time, long end_time, double start_time_mpi, double end_time_mpi) {
-    printf("dot product: %f\n", total_dotprod);
-    printf("number of processes: %d ", p);
-    printf("wall time MPI: %f usec\n", (end_time_mpi - start_time_mpi) * 1000000),
+   // printf("dot product: %f\n", total_dotprod);
+   // printf("number of processes: %d ", p);
+    //printf("wall time MPI: %f usec\n", (end_time_mpi - start_time_mpi) * 1000000),
+    printf("%f\n", (end_time_mpi - start_time_mpi) * 1000000),
+
     fflush(stdout);
 }
 
