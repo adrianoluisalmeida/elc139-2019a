@@ -29,7 +29,7 @@ O código em questão está documentado em cada uma das funções do MPI. Pode s
 
 - 1.1 Avalie o desempenho do programa conforme as instruções do trabalho t2, mas variando o número de processos (-np) ao invés de threads.
 
-Para os testes foram realizados 30 execuções do código [mpi_dotprod.c](mpi/mpi_dotprod.c) com auxilio do [calc_time.sh] (mpi/calc_time.sh) que calcula a média das execuções de acordo com a entrada:
+Para os testes foram realizados 30 execuções do código [mpi_dotprod.c](mpi/mpi_dotprod.c) com auxilio do [calc_time.sh](mpi/calc_time.sh) que calcula a média das execuções de acordo com a entrada:
 ```sh
  ./calc_time.sh <np> <workizeTotal> <repeticoes>.
 ```
