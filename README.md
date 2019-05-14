@@ -12,6 +12,7 @@ Sala: 363, CT
  3. [Scheduling com OpenMP](trabalhos/t3) (entrega até segunda, 08/04, 23h59)
  4. [Geração de Fractais de Mandelbrot em OpenMP](trabalhos/t4) (entrega até segunda, 22/04, 23h59)
  5. [Primeiros passos com MPI](trabalhos/t5) (entrega até segunda, 06/05, 23h59)
+ 6. [Comunicação coletiva em MPI](trabalhos/t6) (entrega até quarta, 15/05, 23h59)
 <!--
  2. [Experiências com profilers](trabalhos/t2) (entrega até quarta, 21/03, 23h59)
  3. [Programação paralela multithread](trabalhos/t3) (entrega até segunda, 09/04, 23h59)
