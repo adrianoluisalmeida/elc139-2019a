@@ -4,7 +4,6 @@ Disciplina: elc139 - Programação Paralela <br/>
 Aluno: Adriano Luís de Almeida
 
 ## Parte 1
-------
 
 **MPI_Bcast(), MPI_Scatter() e MPI_Gather()** são utilizados para o processo de comunicação e multiplicação. Ele são usado para substituir os send(s)/recieve(s) da aplicação. 
 
@@ -31,3 +30,20 @@ MPI_Gather (C[from], SIZE*SIZE/nproc, MPI_INT, C, SIZE*SIZE/nproc, MPI_INT, 0, M
 Nesse caso o parâmetro referente ao número  de recebimentos por processo equivale ao total de elementos ÷ número de processos do grupo.
 
 Implementação: [parte1.c](parte1.c)
+
+
+## Parte 2
+
+// a fazer...
+
+
+## Referências
+
+[MPI_Scatter](https://www.mpich.org/static/docs/v3.1/www3/MPI_Scatter.html)   
+[MPI_Bcast](https://www.mpich.org/static/docs/v3.1/www3/MPI_Bcast.html)   
+[MPI_Gather](https://www.mpich.org/static/docs/v3.1/www3/MPI_Gather.html)   
+[Examples using MPI_SCATTER, MPI_SCATTER](https://www.mpi-forum.org/docs/mpi-1.1/mpi-11-html/node72.html)    
+[MPI: A Message-Passing Interface Standard](https://www.mpi-forum.org/docs/mpi-3.1/mpi31-report.pdf)     
+[A Comprehensive MPI Tutorial Resource](http://mpitutorial.com/)      
+
+
