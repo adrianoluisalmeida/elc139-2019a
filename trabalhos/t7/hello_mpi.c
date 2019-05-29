@@ -4,19 +4,21 @@
 
 int main(int argc, char* argv[]) {
   int myrank;         // "rank" do processo (0 a P-1)
-  int p;              // número de processos
+  int p;              // nï¿½mero de processos
   int source;         // "rank" do processo remetente
-  int dest;           // "rank" do processo destinatário
+  int dest;           // "rank" do processo destinatï¿½rio
   int tag = 0;        // "etiqueta" da mensagem
   char msg[100];      // a mensagem
-  MPI_Status status;  // "status" de uma operação efetuada
+  MPI_Status status;  // "status" de uma operaï¿½ï¿½o efetuada
 
   // MPI_Init deve ser invocado antes de qualquer outra chamada MPI
   MPI_Init(&argc, &argv);
   // Descobre o "rank" do processo
   MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
-  // Descobre o número de processos
+  // Descobre o nï¿½mero de processos
   MPI_Comm_size(MPI_COMM_WORLD, &p);
+
+  //printf("processos %d", p);
 
   if (myrank != 0) {
     // obtem nome do host
