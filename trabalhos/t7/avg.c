@@ -8,39 +8,38 @@
 #include <assert.h>
 
 // Creates an array of random numbers. Each number has a value from 0 - 1
-float *create_rand_nums(int num_elements) {
+float *create_rand_nums(int num_elements)
+{
   float *rand_nums = (float *)malloc(sizeof(float) * num_elements);
   assert(rand_nums != NULL);
   int i;
-  for (i = 0; i < num_elements; i++) {
+  for (i = 0; i < num_elements; i++)
+  {
     rand_nums[i] = (rand() / (float)RAND_MAX);
   }
   return rand_nums;
 }
 
 // Computes the average of an array of numbers
-float compute_avg(float *array, int num_elements) {
+float compute_avg(float *array, int num_elements)
+{
   float sum = 0.f;
   int i;
-  for (i = 0; i < num_elements; i++) {
+  for (i = 0; i < num_elements; i++)
+  {
     sum += array[i];
   }
   return sum / num_elements;
 }
 
-int main(int argc, char** argv) {
-  
-  
+int main(int argc, char **argv)
+{
 
-  if (argc != 1) {
-//    fprintf(stderr, "Usage: avg num_elements_per_proc\n");
-//    exit(1);
-  }
-  
+
   double start_time_mpi, end_time_mpi;
 
-  //int num_elements_per_proc = atoi(argv[0]);
-  int num_elements_per_proc = 10;
+  //int num_elements_per_proc = atoi(argv[1]);
+  int num_elements_per_proc = 30000;
   // Seed the random number generator to get different results each time
   srand(time(NULL));
 
@@ -55,9 +54,10 @@ int main(int argc, char** argv) {
   // size will be the number of elements per process times the number
   // of processes
   float *rand_nums = NULL;
-  if (world_rank == 0) {
+  if (world_rank == 0)
+  {
     rand_nums = create_rand_nums(num_elements_per_proc * world_size);
-    //start_time_mpi = MPI_Wtime();
+    start_time_mpi = MPI_Wtime();
   }
 
   // For each process, create a buffer that will hold a subset of the entire
@@ -75,7 +75,8 @@ int main(int argc, char** argv) {
 
   // Gather all partial averages down to the root process
   float *sub_avgs = NULL;
-  if (world_rank == 0) {
+  if (world_rank == 0)
+  {
     sub_avgs = (float *)malloc(sizeof(float) * world_size);
     assert(sub_avgs != NULL);
   }
@@ -85,19 +86,21 @@ int main(int argc, char** argv) {
   // total average of all numbers. Since we are assuming each process computed
   // an average across an equal amount of elements, this computation will
   // produce the correct answer.
-  if (world_rank == 0) {
+  if (world_rank == 0)
+  {
     float avg = compute_avg(sub_avgs, world_size);
-    //end_time_mpi = MPI_Wtime();
-    //printf("%f\n", (end_time_mpi - start_time_mpi)*1000);
-     printf("Avg of all elements is %f\n", avg);
+    end_time_mpi = MPI_Wtime();
+    printf("%lf\n", (end_time_mpi - start_time_mpi) * 1000);
+    printf("Avg of all elements is %f\n", avg);
     // Compute the average across the original data for comparison
     float original_data_avg =
-      compute_avg(rand_nums, num_elements_per_proc * world_size);
-     printf("Avg computed across original data is %f\n", original_data_avg);
+        compute_avg(rand_nums, num_elements_per_proc * world_size);
+    printf("Avg computed across original data is %f\n", original_data_avg);
   }
 
   // Clean up
-  if (world_rank == 0) {
+  if (world_rank == 0)
+  {
     free(rand_nums);
     free(sub_avgs);
   }
