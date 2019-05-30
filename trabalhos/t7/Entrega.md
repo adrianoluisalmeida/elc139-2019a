@@ -22,6 +22,7 @@ MPI_Barrier(MPI_COMM_WORLD);
 Implementação: [sr_bcast_p1.c](sr_bcast_p1.c)
 
 **Resultados**
+
 | send/recieve |          | bcast |          |
 |--------------|----------|-------|----------|
 | np           | usec     | np    | usec     |
