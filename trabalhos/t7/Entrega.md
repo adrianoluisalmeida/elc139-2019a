@@ -23,14 +23,14 @@ Implementação: [sr_bcast_p1.c](sr_bcast_p1.c)
 
 **Resultados**
 
-| send/recieve |          | bcast |          |
-|--------------|----------|-------|----------|
-| np           | usec     | np    | usec     |
-| 2            | 81782.63 | 2     | 57466.80 |
-| 4            | 56153.03 | 4     | 58949.26 |
-| 8            | 64451.93 | 8     | 56976.60 |
-| 12           | 75911.46 | 12    | 63893.00 |
-| 16           | 98332.34 | 16    | 70722.76 |
+| send/recieve |          | bcast |          |   |
+|--------------|----------|-------|----------|---|
+| np           | usec     | np    | usec     |   |
+| 2            | 81782.63 | 2     | 57466.80 |   |
+| 4            | 56153.03 | 4     | 58949.26 |   |
+| 8            | 64451.93 | 8     | 56976.60 |   |
+| 12           | 75911.46 | 12    | 63893.00 |   |
+| 16           | 98332.34 | 16    | 70722.76 |   |
 
 Os testes foram realizado com auxilio do [calc_time.sh](calc_time.sh) que realizou 30 testes e fez a média entre os testes para cada np (número de processos) informado na tabela.
 
