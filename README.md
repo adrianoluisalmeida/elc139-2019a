@@ -14,6 +14,7 @@ Sala: 363, CT
  5. [Primeiros passos com MPI](trabalhos/t5) (entrega até segunda, 06/05, 23h59)
  6. [Comunicação coletiva em MPI](trabalhos/t6) (entrega até quarta, 15/05, 23h59)
  7. [Avaliação de desempenho de programas MPI](trabalhos/t7) (entrega até quarta, 29/05, 23h59)
+ 8. [Geração de Imagem em Paralelo com CUDA](trabalhos/t8) (entrega até segunda, 17/06, 23h59)
 <!--
  2. [Experiências com profilers](trabalhos/t2) (entrega até quarta, 21/03, 23h59)
  3. [Programação paralela multithread](trabalhos/t3) (entrega até segunda, 09/04, 23h59)
