@@ -1,7 +1,6 @@
 #include <cstdlib>
 #include <sys/time.h>
 #include <math.h>
-#include "wave.h"
 
 __global__
 void calculate(int width, int frames, unsigned char* pic)
