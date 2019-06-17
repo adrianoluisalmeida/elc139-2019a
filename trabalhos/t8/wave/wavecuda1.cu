@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
     for (int frame = 0; frame < frames; frame++) {
       char name[32];
       sprintf(name, "wave%d.bmp", frame + 1000);
-      writeBMP(width, width, &pic[frame * width * width], name);
+     // writeBMP(width, width, &pic[frame * width * width], name);
     }
   }
   cudaFree(pic);
