@@ -12,7 +12,7 @@ void calculate(int width, int frames, unsigned char* pic)
   //This variable and contains the dimensions of the block.
   int offset = blockDim.x;
 
-  for (int frame = index; frame < frames; frames++) {
+  for (int frame = index; frame < frames; frame += offset) {
     for (int row = 0; row < width; row++) {
       for (int col = 0; col < width; col++) {
         float fx = col - 1024/2;
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
   // end time
   gettimeofday(&end, NULL);
   double runtime = end.tv_sec + end.tv_usec / 1000000.0 - start.tv_sec - start.tv_usec / 1000000.0;
-  printf("compute time: %.4f seg.\n", runtime);
+  printf("compute time: %.4f s\n", runtime);
   //std::cout << "compute time: " << runtime << std::endl;
   
   // verify result by writing frames to BMP files
