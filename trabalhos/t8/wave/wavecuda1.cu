@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include <iostream>
 #include <sys/time.h>
 #include <math.h>
 
