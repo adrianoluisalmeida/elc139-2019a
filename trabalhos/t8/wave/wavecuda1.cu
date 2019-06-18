@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sys/time.h>
+#include <stdio.h>
 #include <math.h>
 
 __global__
@@ -68,8 +69,9 @@ int main(int argc, char *argv[])
   // end time
   gettimeofday(&end, NULL);
   double runtime = end.tv_sec + end.tv_usec / 1000000.0 - start.tv_sec - start.tv_usec / 1000000.0;
-  std::cout<< "compute time: " << runtime << std::endl;
-
+  printf("compute time: %2.f", runtime);
+  //std::cout << "compute time: " << runtime << std::endl;
+  
   // verify result by writing frames to BMP files
   //if ((width <= 256) && (frames <= 100)) {
   //  for (int frame = 0; frame < frames; frame++) {
