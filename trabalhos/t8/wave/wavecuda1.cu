@@ -7,12 +7,12 @@ __global__
 void calculate(int width, int frames, unsigned char* pic)
 {
   //Indice de segmento dentro do bloco
-  int index = blockIdx.x * blockDim.x + threadIdx.x;
+  int index = threadIdx.x;
 
   //This variable and contains the dimensions of the block.
-  int offset = blockDim.x * gridDim.x;
+  int offset = blockDim.x;
 
-  for (int frame = index; frame < frames; frame++) {
+  for (int frame = index; frame < frames; frames++) {
     for (int row = 0; row < width; row++) {
       for (int col = 0; col < width; col++) {
         float fx = col - 1024/2;
@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
   gettimeofday(&start, NULL);
 
   // calculate threads for frames
-  calculate<<<(width+frames - 1) / frames, frames>>>(width, frames, pic);
+  calculate<<<1, frames>>>(width, frames, pic);
 
   // cudaDeviceSynchronize() will force the program to ensure the stream(s)'s kernels/memcpys are complete before continuing
   cudaDeviceSynchronize();
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
   // end time
   gettimeofday(&end, NULL);
   double runtime = end.tv_sec + end.tv_usec / 1000000.0 - start.tv_sec - start.tv_usec / 1000000.0;
-  printf("compute time: %.4f s\n", runtime);
+  printf("compute time: %.4f seg.\n", runtime);
   //std::cout << "compute time: " << runtime << std::endl;
   
   // verify result by writing frames to BMP files
