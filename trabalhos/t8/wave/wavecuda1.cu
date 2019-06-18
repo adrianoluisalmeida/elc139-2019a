@@ -45,7 +45,8 @@ int main(int argc, char *argv[])
     std::cout << "error: num_frames must be at least 1\n" << std::endl; 
     exit(-1);
   }
-  std::cout << "computing  " << std::cout << frames << " of " std::cout << " picture " << std::cout << width  << std::cout << " picture "  << std::endl;
+
+  std::cout << "computing  " << std::cout << frames << std::cout << " of " std::cout << " picture " << std::cout << width  << std::cout << " picture "  << std::endl;
   //printf("computing %d frames of %d by %d picture\n", frames, width, width);
 
 
