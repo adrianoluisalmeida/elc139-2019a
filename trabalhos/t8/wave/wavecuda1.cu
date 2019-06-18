@@ -2,6 +2,7 @@
 #include <sys/time.h>
 #include <stdio.h>
 #include <math.h>
+#include "wave.h"
 
 __global__
 void calculate(int width, int frames, unsigned char* pic)
@@ -48,7 +49,7 @@ int main(int argc, char *argv[])
   }
 
  // std::cout << "computing  " << std::cout << frames << std::cout << " of " std::cout << " picture " << std::cout << width  << std::cout << " picture "  << std::endl;
-  //printf("computing %d frames of %d by %d picture\n", frames, width, width);
+  printf("computing %d frames of %d by %d picture\n", frames, width, width);
 
 
   unsigned char* pic;
@@ -73,13 +74,13 @@ int main(int argc, char *argv[])
   //std::cout << "compute time: " << runtime << std::endl;
   
   // verify result by writing frames to BMP files
-  //if ((width <= 256) && (frames <= 100)) {
-  //  for (int frame = 0; frame < frames; frame++) {
-  //    char name[32];
-  //  //  sprintf(name, "wave%d.bmp", frame + 1000);
-  //   // writeBMP(width, width, &pic[frame * width * width], name);
-  //  }
-  //}
+  if ((width <= 256) && (frames <= 100)) {
+    for (int frame = 0; frame < frames; frame++) {
+      char name[32];
+    //  sprintf(name, "wave%d.bmp", frame + 1000);
+      writeBMP(width, width, &pic[frame * width * width], name);
+    }
+  }
   cudaFree(pic);
   return 0;
 }
