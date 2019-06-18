@@ -31,12 +31,22 @@ int main(int argc, char *argv[])
 {
 
   // check command line
-  if (argc != 3) {fprintf(stderr, "usage: %s frame_width num_frames\n", argv[0]); exit(-1);}
+  if (argc != 3) {
+    std::cout << "usage: " << std::endl;
+     exit(-1);
+  }
   int width = atoi(argv[1]);
-  if (width < 100) {fprintf(stderr, "error: frame_width must be at least 100\n"); exit(-1);}
+  if (width < 100) {
+    std::cout << "error: frame_width must be at least 100\n" << std::endl;
+    exit(-1);
+  }
   int frames = atoi(argv[2]);
-  if (frames < 1) {fprintf(stderr, "error: num_frames must be at least 1\n"); exit(-1);}
-  printf("computing %d frames of %d by %d picture\n", frames, width, width);
+  if (frames < 1) {
+    std::cout << "error: num_frames must be at least 1\n" << std::endl; 
+    exit(-1);
+  }
+  std::cout << "computing  " << std::cout << frames << " of " std::cout << " picture " << std::cout << width  <<  " picture "  << std::endl;
+  //printf("computing %d frames of %d by %d picture\n", frames, width, width);
 
 
   unsigned char* pic;
@@ -57,16 +67,16 @@ int main(int argc, char *argv[])
   // end time
   gettimeofday(&end, NULL);
   double runtime = end.tv_sec + end.tv_usec / 1000000.0 - start.tv_sec - start.tv_usec / 1000000.0;
-  printf("compute time: %.4f s\n", runtime);
+  std::cout<< "compute time: " << runtime << std::endl;
 
   // verify result by writing frames to BMP files
-  if ((width <= 256) && (frames <= 100)) {
-    for (int frame = 0; frame < frames; frame++) {
-      char name[32];
-      sprintf(name, "wave%d.bmp", frame + 1000);
-     // writeBMP(width, width, &pic[frame * width * width], name);
-    }
-  }
+  //if ((width <= 256) && (frames <= 100)) {
+  //  for (int frame = 0; frame < frames; frame++) {
+  //    char name[32];
+  //  //  sprintf(name, "wave%d.bmp", frame + 1000);
+  //   // writeBMP(width, width, &pic[frame * width * width], name);
+  //  }
+  //}
   cudaFree(pic);
   return 0;
 }
