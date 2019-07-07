@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Título da página</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="main.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li>O aplicativo criou um worker no main.js, que executa o código de worker.js</li>
+      <li>Envia ao trabalhador uma mensagem com a string 'Happy Birthday'</li>
+      <li>O trabalhador, que tinha um ouvinte de evento para 'mensagem', recebeu a mensagem e executou o código.</li>
+      <li>O trabalhador acrescentou "a mim mesmo!" para os dados da mensagem criando "Feliz Aniversário para mim mesmo!" e envia isso como dados dentro de uma mensagem de volta para main.js</li>
+      <li>Main.js, que também tinha um ouvinte de evento para a mensagem, do que console.log 'Happy Birthday to myself!'.</li>
+      
+    </ul>
+  </body>
+</html>

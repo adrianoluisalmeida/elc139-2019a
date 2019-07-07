@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Título da página</title>
+    <meta charset="utf-8">
+    
+    <script type="text/javascript">
+        function startWorker(){
+            var worker = new Worker('worker.js');
+
+            worker.onmessage = (e) =>{
+                console.log(e.data);
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <button onclick="startWorker()">Nova thread</button>
+  </body>
+</html>
